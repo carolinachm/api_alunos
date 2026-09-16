@@ -18,6 +18,9 @@ import (
 	// e formatar textos.
 	"fmt"
 
+	//os é um pacote nativo do Go que fornece uma interface para interagir com o sistema operacional.
+	"os"
+
 	// log permite registrar mensagens de erro e encerrar
 	// a aplicacao em situacoes criticas.
 	"log"
@@ -85,7 +88,7 @@ var db *sql.DB
 // e cria a tabela "alunos", caso ela ainda nao exista.
 func initDB() {
 	// bdURL deve possuir as informacoes necessarias para realizar a conexao com o banco de dados
-	dbURL := "postgresql://db_api_alunos_user:1zqXCWuLG8EdWtkcR5chwVhNm7Rb8aaT@dpg-dakms45bvr0c73e6if10-a/db_api_alunos"
+	dbURL := os.Getenv("DATABASE_URL")
 	
 
 	// Declara a variavel que armazenara possiveis erros.
