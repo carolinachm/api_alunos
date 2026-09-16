@@ -25,7 +25,7 @@ func InitDB() {
 
 	// Verifica se a conexão está ativa
 	if err = db.Ping(); err != nil {
-		log.Fatalf("❌ Erro ao conectar ao banco: %v", err)
+		log.Fatalf(" Erro ao conectar ao banco: %v", err)
 	}
 	fmt.Println("Conectado ao PostgreSQL com sucesso!")
 
@@ -44,7 +44,7 @@ func InitDB() {
 	if err != nil {
 		log.Fatalf("❌ Erro ao criar tabela: %v", err)
 	}
-	fmt.Println("✅ Tabela 'alunos' pronta!")
+	fmt.Println(" Tabela 'alunos' pronta!")
 }
 
 // ============================================================

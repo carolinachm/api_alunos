@@ -17,7 +17,7 @@ func main() {
 	// 3. Aplica middleware CORS
 	servidor := CorsMiddleware(mux)
 
-	// 4. Inicia o servidor — ✅ CORRIGIDO
+	// 4. Inicia o servidor 
 	porta := ":8080"
 	fmt.Println("Servidor rodando em http://localhost", porta)
 
